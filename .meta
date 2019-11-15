@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "riddler-backend": "https://github.com/kaspersiig/riddler-backend",
+    "riddler-frontend": "https://github.com/kaspersiig/riddler-frontend"
+  }
+}
