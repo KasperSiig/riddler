@@ -11,7 +11,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=password
-  
+ 
   riddler-frontend:
     container_name: riddler-frontend
     image: node:lts
@@ -22,7 +22,7 @@ services:
     volumes:
       - ./riddler-frontend:/app
       - /app/node_modules
-    command: bash -c 'yarn install && yarn serve'
+    command: bash -c 'yarn install && yarn start --host 0.0.0.0'
 
   riddler-backend:
     container_name: riddler-backend
@@ -37,4 +37,4 @@ services:
     volumes:
       - ./riddler-backend:/app
       - /app/node_modules
-    command: bash -c 'yarn install && yarn start:watch'
+    command: bash -c 'yarn install && yarn start:dev'
